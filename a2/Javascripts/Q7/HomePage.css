@@ -1,0 +1,122 @@
+/* Global settings */
+*, *:before, *:after {
+    box-sizing: border-box; /* Apply box-sizing to all elements for consistent padding and border behavior */
+}
+
+html, body {
+    height: 100%; /* Full height for html and body to fill the viewport */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal overflow across the entire site */
+}
+
+img {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto;
+}
+
+/* Flex container setup for the entire body */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimum height to cover the full viewport height */
+}
+
+/* Header and footer shared styles */
+header, footer {
+    flex: none; /* flex shorthand for 'flex: 0 1 auto' which means do not grow, may shrink */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+}
+
+/* Main layout styling */
+.main-container {
+    display: flex;
+    flex: 1; /* Allows this container to grow and fill available space */
+    flex-direction: row; /* Default direction to row */
+    width: 100%; /* Ensure it spans the full width of its container */
+    padding: 0 10px; /* Consistent padding to avoid touch with the screen edges */
+}
+
+/* Side menu specific styles */
+#side-menu {
+    width: 200px; /* Default width */
+    flex: none; /* Do not grow or shrink this element */
+    overflow-y: auto; /* Scrollable if content exceeds the height */
+    background-color: #f0f0f0;
+    padding: 20px 0; /* Vertical padding */
+}
+
+/* Main content area styles */
+main {
+    flex: 1; /* Allow this area to take up remaining space */
+    overflow-y: auto; /* Scrollable if content exceeds the height */
+    padding: 20px; /* Consistent padding */
+}
+
+/* Side menu link styling */
+#side-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#side-menu ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+
+    /* Hover effect */
+    &:hover {
+        background-color: #cde;
+    }
+}
+
+/* Responsive adjustments for devices with max-width of 600px */
+@media (max-width: 600px) {
+    .main-container {
+        flex-direction: row; /* Keep side menu on the left */
+    }
+
+    #side-menu {
+        width: 150px; /* Reduced width for the side menu on smaller screens */
+        overflow-y: auto; /* Keeps the menu scrollable */
+        height: 100vh; /* Full viewport height */
+    }
+
+    main {
+        flex: 1; /* Allow this area to take up remaining space */
+        width: calc(100% - 150px); /* Take the remaining width minus the side menu width */
+        overflow-y: auto; /* Scrollable if content exceeds the height */
+    }
+}
+.pet-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.pet {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 200px;  /* Adjust size as necessary */
+}
+
+.pet img {
+    width: 100%;
+    height: auto;
+}
+#dateTimeDisplay {
+    font-size: 16px;
+    color: #fff; /* Change color as needed */
+    text-align: center;
+    padding: 10px;
+}

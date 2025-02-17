@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Books Online</title>
+    <link rel="stylesheet" href="CSS/Q4.css">
+    <script src="Javascripts/Q4.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <h1>Order Books Online</h1>
+        <table>
+            <tr>
+                <th>Book</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+            <tr class="order-row">
+                <td class="book">Basic Web Programming</td>
+                <td><input type="text" class="quantity" value="1"></td>
+                <td class="price">$19.99</td>
+            </tr>
+            <tr class="order-row">
+                <td class="book">Intro to PHP</td>
+                <td><input type="text" class="quantity" value="1"></td>
+                <td class="price">$86.00</td>
+            </tr>
+            <tr class="order-row">
+                <td class="book">Advanced JQuery</td>
+                <td><input type="text" class="quantity" value="1"></td>
+                <td class="price">$55.00</td>
+            </tr>
+        </table>
+        <button onclick="calculateOrder()">Calculate the order</button>
+        <div id="orderSummary">
+            <p id="summary"></p>
+            <p id="total"></p>
+        </div>
+    </div>
+</body>
+</html>

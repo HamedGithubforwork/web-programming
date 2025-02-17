@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Functions</title>
+    <script src="Javascripts/Q3.js"></script>
+</head>
+<body>
+    <h1>Function Outputs</h1>
+    <p>Add Numbers: <span id="addNumbers"></span></p>
+    <p>Max Number: <span id="maxNumber"></span></p>
+    <p>Add Only Numbers: <span id="addOnlyNumbers"></span></p>
+    <p>Get Digits: <span id="getDigits"></span></p>
+    <p>Reverse String: <span id="reverseString"></span></p>
+    <p>Current Date: <span id="currentDate"></span></p>
+
+    <script>
+        document.getElementById('addNumbers').textContent = addNumbers([1, 2, 3, 4]);
+        document.getElementById('maxNumber').textContent = findMaxNumber(10, 20, 30, 40);
+        document.getElementById('addOnlyNumbers').textContent = addOnlyNumbers([4, '5', '6px', true, 'test']);
+        document.getElementById('getDigits').textContent = getDigits('abc123def');
+        document.getElementById('reverseString').textContent = reverseString('hello');
+        document.getElementById('currentDate').textContent = getCurrentDate();
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Pet Adoption Service</title>
+    <link rel="stylesheet" href="HomePage.css">
+    <script src="time.js"></script>
+    <script src="formValidation.js"></script>
+
+</head>
+<body>
+    <header>
+        <a href="HomePage.html">
+            <h1>Pet Adoption Service</h1>
+
+            <img src="pets.jpg" alt="Pet Adoption Service Logo" id="logo">
+            <div id="dateTimeDisplay"></div> 
+
+
+        </a>
+    </header>
+    <div class="main-container">
+        <nav id="side-menu">
+            <ul>
+                <li><a href="HomePage.html">Home</a></li>
+                <li><a href="BrowseAvailablePets.html">Browse Available Pets</a></li>
+                <li><a href="FindADogOrCat.html">Find a Dog/Cat</a></li>
+                <li><a href="DogCare.html">Dog Care</a></li>
+                <li><a href="CatCare.html">Cat Care</a></li>
+                <li><a href="haveAPetToGiveAway.html">Have a Pet to Give Away</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <main>
+            <div class="main-content">
+                <h2>Find Your Perfect Pet</h2>
+                <form id="petSearchForm" onsubmit=" return validateForm(); " >
+                    
+                    <label for="animalType">Choose a pet:</label>
+                    <select id="animalType" name="animalType">
+                        <option value="" disabled selected>Select pet type</option> <!-- Blank initial choice -->
+
+                        <option value="Dog">Dog</option>
+                        <option value="Cat">Cat</option>
+                    </select><br><br>
+                
+                    <label for="breed">Breed:</label>
+                    <select id="breed" name="breed">
+                        <option value="" disabled selected>Select breed</option> <!-- Blank initial choice -->
+
+                        <option value="any">Doesn't matter</option>
+                        <option value="labrador">Labrador (Dog)</option>
+                        <option value="goldenRetriever">Golden Retriever (Dog)</option>
+                        <option value="beagle">Beagle (Dog)</option>
+                        <option value="siamese">Siamese (Cat)</option>
+                        <option value="persian">Persian (Cat)</option>
+                        <option value="maineCoon">Maine Coon (Cat)</option>
+                    </select><br><br>
+                
+                    <label for="age">Preferred Age:</label>
+                    <select id="age" name="age">
+                        <option value="" disabled selected>Select age</option> <!-- Blank initial choice -->
+
+                        <option value="any">Doesn't matter</option>
+                        <option value="puppyKitten">Puppy/Kitten</option>
+                        <option value="young">Young</option>
+                        <option value="adult">Adult</option>
+                        <option value="senior">Senior</option>
+                    </select><br><br>
+                
+                    <label for="gender">Preferred Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="" disabled selected>Select gender</option> <!-- Blank initial choice -->
+
+                        <option value="any">Doesn't matter</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select><br><br>
+                
+                    <fieldset>
+                        <legend>Compatibility Requirements:</legend>
+                        <input type="checkbox" id="dogs" name="compatibility" value="dogs">
+                        <label for="dogs">Gets along with other dogs</label><br>
+                        <input type="checkbox" id="cats" name="compatibility" value="cats">
+                        <label for="cats">Gets along with other cats</label><br>
+                        <input type="checkbox" id="children" name="compatibility" value="children">
+                        <label for="children">Good with small children</label>
+                    </fieldset><br>
+                    <div id="errorMessages" style="color: red;"></div> 
+
+                    <button type="submit">Submit</button>
+                    <button type="reset">Clear</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>© 2023 Pet Adoption Service. All rights reserved.</p>
+        <a href="PrivacyAndDisclaimerStatement.html">Privacy/Disclaimer Statement</a>
+    </footer>
+</body>
+</html>
